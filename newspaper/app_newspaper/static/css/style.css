@@ -1,0 +1,74 @@
+
+body{
+ background: rgb(43, 232, 166);
+}
+.menu1{
+    text-align: center;
+  }
+.avatar2{
+  width: 200px;
+  height: 325px;
+  border-radius: 50%;
+}
+.menu2{
+  background: #4CAF50;
+  
+}
+.boton1{
+  background-color: orange; /* Green */
+    margin-left: auto;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+    border: 1px solid #4CAF50
+    
+
+
+    
+    
+}
+.menu3{
+  text-align: center;
+  
+}
+.box{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+.boton2{
+  background-color: orange; /* Green */
+    margin-left: auto;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+    border: 1px solid #4CAF50
+    
+}
+.boton3{
+  background-color: orange; /* Green */
+   
+    border: none;
+    color: white;
+    padding: 15px 32px;
+  
+    text-decoration: none;
+    
+    font-size: 16px;
+    border: 1px solid #4CAF50
+    
+}
+.paisaje{
+  width: 300px;
+  height: 300px;
+}

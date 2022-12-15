@@ -1,0 +1,61 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
+        <link rel = "stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <title>Django Blog</title>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            {% if user.is_authenticated %}
+                <img src="{%  static 'img/bicho.jpg '%}" alt="" class="avatar2">
+            <p class= "textosaludo">Bienvenido {{ user.username }}!</p>
+            <button class="btn btn-success"><p><a class="text-light"href ={% url 'logout' %}>Logout</a></p></button>
+            {% else %}
+                <p class="noiniciosesion">Usuario no ha iniciado sesiòn.</p>
+                <a href="{% url 'login' %}" class="btn btn-success" href="#" role="button">Login</a>
+                <a href="{% url 'signup' %}" class="btn btn-success" href="#" role="button">Sign Up</a>
+            {% endif %}
+        
+        <h1><a href="{% url 'home' %}" class="text-success" >Django Blog</a></h1>
+        </header>
+        <article>
+            <div class="slider">
+                <div class="swiper">                 <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="{% static 'img/computer.png'%}"></div>
+                      <div class="swiper-slide"><img src="{% static 'img/keyboard.png'%}"></div>
+                      <div class="swiper-slide"><img src="{% static 'img/mouse.png'%}"></div>              
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  
+                  
+                  </div>
+            </div>
+                {% block content %}
+                {% endblock content %}
+        </article>
+            
+        </div>
+        <script src = "{% static 'bootstrap-5.2.2-dist/js/bootstrap.min.js'%}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+        <script>
+            const swiper = new Swiper('.swiper', {           
+                loop: true,
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                },
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+              });
+        </script>
+    </body>
+</html>

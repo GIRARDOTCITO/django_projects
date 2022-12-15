@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+
+
+
+
+<div class="menu3 ">
+    
+    {% if user.is_authenticated %}
+    <img src="{%  static 'img/hero.jpg' %}" alt="" class="avatar2" >
+        <p> Hola {{ user.username }}! {{ user.age }} Años.</p>
+        <p><a href="{% url 'logout' %}"><button class="boton2"> Log Out</button></a></p>
+</div>
+    {% else %}
+  
+        <header class="menu1 ">
+            <img src="{%  static 'img/paisaje.jpg' %}" alt=""  class="paisaje">
+        <p>Para iniciar preciona alguna opcion</p>
+        <a href="{% url 'login' %}" class="boton1"> Log In </a>
+        <a href="{% url 'signup' %}" class="boton1"> Sing Up </a>
+        </header>
+
+    {% endif %}
+
+{% endblock content %}
