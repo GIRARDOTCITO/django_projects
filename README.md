@@ -9,3 +9,5 @@ Si entramos al login nos apareceran estas opciones para entrar a nuestra aplicac
 Si entramos a registrarnos nos apareceran esas opciones.
 <img width="697" alt="image" src="https://user-images.githubusercontent.com/101753244/208266717-1a0bb978-5846-44c4-a9d4-fc945c4d11a3.png">
 al logearnos, apareceran esas opciones, y nuestro blog.
+<img width="923" alt="image" src="https://user-images.githubusercontent.com/101753244/208267497-18ebfe16-6880-4d7f-9d78-2e84e92680f9.png">
+Continuamos con nuestro proyecto, en este caso voy a mostrar el newspaper, el cual su pantalla inicial es esta. 
